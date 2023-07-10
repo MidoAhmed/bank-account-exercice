@@ -1,4 +1,4 @@
-import { TransactionType } from '../TransactionType.enum';
+import { TransactionType } from '../shared/enums/TransactionType';
 import { Account } from '../models/Account';
 import { Customer } from '../models/Customer';
 

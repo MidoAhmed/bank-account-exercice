@@ -1,4 +1,4 @@
-import { TransactionType } from '../TransactionType.enum';
+import { TransactionType } from '../shared/enums/TransactionType';
 
 export class Transaction {
   private transactionId: string;

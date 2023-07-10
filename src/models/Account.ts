@@ -1,4 +1,4 @@
-import { TransactionType } from '../TransactionType.enum';
+import { TransactionType } from '../shared/enums/TransactionType';
 import { Customer } from './Customer';
 import { Transaction } from './Transaction';
 import { v4 as uuidv4 } from 'uuid';
