@@ -32,6 +32,9 @@ export class Account {
   }
 
   deposit(amount: number): void {
+    if (amount <= 0) {
+      throw new Error('Invalid amount');
+    }
     this.balance += amount;
     const operation: Transaction = new Transaction(
       uuidv4(),
@@ -43,17 +46,19 @@ export class Account {
   }
 
   withdraw(amount: number): void {
-    if (amount <= this.balance) {
-      this.balance -= amount;
-      const operation: Transaction = new Transaction(
-        uuidv4(),
-        TransactionType.WITHDRAWAL,
-        amount,
-        new Date(),
-      );
-      this.transactions.push(operation);
-    } else {
+    if (amount <= 0) {
+      throw new Error('Invalid amount');
+    }
+    if (amount > this.balance) {
       throw new Error('Insufficient balance');
     }
+    this.balance -= amount;
+    const operation: Transaction = new Transaction(
+      uuidv4(),
+      TransactionType.WITHDRAWAL,
+      amount,
+      new Date(),
+    );
+    this.transactions.push(operation);
   }
 }
