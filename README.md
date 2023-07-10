@@ -23,7 +23,7 @@
 
 # Info :
 
-cette exercice a été réalisée:
+cette exercice a été réalisée avec:
 
 - Typescript
 - Jest (pour les tests)
