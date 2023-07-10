@@ -15,7 +15,7 @@
     npm install
 ```
 
-3. Exécuter les tests
+3. Exécuter les tests et consulter le rapport du coverage
 
 ```bash
     npm test
